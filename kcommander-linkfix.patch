@@ -1,0 +1,94 @@
+--- kcommander3-3.0/kcommander3/Makefile.am.orig	Sat May  4 23:20:30 2002
++++ kcommander3-3.0/kcommander3/Makefile.am	Tue Oct 15 15:06:05 2002
+@@ -3,8 +3,8 @@
+ 
+ ## INCLUDES were found outside kdevelop specific part
+ 
+-kcommander3_SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp wizzard.ui kcManViewer.cpp dlgsymlink.ui dlgoverwrite.ui dlgproperties.cpp dlgoptions.ui kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp 
+-SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp /home/cfricke/UserProj/kcommander3/ChangeLog 
++kcommander3_SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp wizzard.ui kcManViewer.cpp dlgsymlink.ui dlgoverwrite.ui dlgproperties.cpp dlgoptions.ui kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp 
++SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp /home/cfricke/UserProj/kcommander3/ChangeLog 
+ INTERFACES = wizzard.ui dlgsymlink.ui dlgoverwrite.ui dlgoptions.ui 
+ TRANSLATIONS = kcommander3.de.ts 
+ KDE_OPTIONS = qtonly
+--- kcommander3-3.0/kcommander3/Makefile.in.orig	Sat May  4 23:21:34 2002
++++ kcommander3-3.0/kcommander3/Makefile.in	Tue Oct 15 15:11:04 2002
+@@ -218,8 +218,8 @@
+ 
+ #>- kcommander3_SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp wizzard.ui kcManViewer.cpp dlgsymlink.ui dlgoverwrite.ui dlgproperties.cpp dlgoptions.ui kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp 
+ #>+ 1
+-kcommander3_SOURCES=ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp  kcManViewer.cpp   dlgproperties.cpp  kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp  wizzard.cpp dlgsymlink.cpp dlgoverwrite.cpp dlgoptions.cpp
+-SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp /home/cfricke/UserProj/kcommander3/ChangeLog 
++kcommander3_SOURCES=ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp  kcManViewer.cpp   dlgproperties.cpp  kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp  wizzard.cpp dlgsymlink.cpp dlgoverwrite.cpp dlgoptions.cpp
++SOURCES = ftplib.c dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp /home/cfricke/UserProj/kcommander3/ChangeLog 
+ INTERFACES = wizzard.ui dlgsymlink.ui dlgoverwrite.ui dlgoptions.ui 
+ TRANSLATIONS = kcommander3.de.ts 
+ KDE_OPTIONS = qtonly
+@@ -270,7 +270,7 @@
+ 	kcsmtp.$(OBJEXT) kcManViewer.$(OBJEXT) dlgproperties.$(OBJEXT) \
+ 	kcview.$(OBJEXT) kciconview.$(OBJEXT) hexviewedit.$(OBJEXT) \
+ 	kcedit.$(OBJEXT) kctextedit.$(OBJEXT) kccommandparse.$(OBJEXT) \
+-	kcfileiconprovider.$(OBJEXT) metal.$(OBJEXT) dlgdelete.$(OBJEXT) \
++	kcfileiconprovider.$(OBJEXT) dlgdelete.$(OBJEXT) \
+ 	inputbox.$(OBJEXT) dlgcopy.$(OBJEXT) kcommander3view.$(OBJEXT) \
+ 	kcimageviewer.$(OBJEXT) kcdiroperator.$(OBJEXT) kctextviewer.$(OBJEXT) \
+ 	bookmarkcombobox.$(OBJEXT) kclistview.$(OBJEXT) kcfstab.$(OBJEXT) \
+@@ -611,7 +611,7 @@
+ 	dlgsymlink.h kctextviewer.h statuslineentry.h hexviewedit.h \
+ 	kctextedit.h inputbox.h dlgdelete.h kccommandparse.h kcedit.h \
+ 	dlgAdressbook.h dlgoptions.h filesave.xpm fileopen.xpm \
+-	filenew.xpm marble.xpm metal.h dlgtar.h
++	filenew.xpm marble.xpm dlgtar.h
+ kcommander3.moc.o: kcommander3.moc.cpp kcommander3.h kcimageviewer.h \
+ 	kcommander3view.h kcsimplebutton.h kcfiledialog.h kclistview.h \
+ 	kcdiroperator.h kccommon.h kcfileiconprovider.h kcview.h \
+@@ -658,7 +658,6 @@
+ 	dlgdelete.h kccommandparse.h kcedit.h dlgAdressbook.h \
+ 	dlgoptions.h normal.kcommander2.xpm kcsplash.h kcManViewer.h \
+ 	wizzard.h
+-metal.o: metal.cpp metal.h kcfileiconprovider.h marble.xpm
+ statuslineentry.o: statuslineentry.cpp statuslineentry.h
+ statuslineentry.moc.o: statuslineentry.moc.cpp statuslineentry.h
+ wizzard.o: wizzard.cpp wizzard.h wizzard.moc
+@@ -945,11 +944,11 @@
+ 
+ 
+ #>+ 11
+-kcommander3.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dlgAdressbook.cpp $(srcdir)/statuslineentry.cpp $(srcdir)/dlgtar.cpp $(srcdir)/kcmailus.cpp $(srcdir)/kcsmtp.cpp $(srcdir)/kcManViewer.cpp $(srcdir)/dlgproperties.cpp $(srcdir)/kcview.cpp $(srcdir)/kciconview.cpp $(srcdir)/hexviewedit.cpp $(srcdir)/kcedit.cpp $(srcdir)/kctextedit.cpp $(srcdir)/kccommandparse.cpp $(srcdir)/kcfileiconprovider.cpp $(srcdir)/metal.cpp $(srcdir)/dlgdelete.cpp $(srcdir)/inputbox.cpp $(srcdir)/dlgcopy.cpp $(srcdir)/kcommander3view.cpp $(srcdir)/kcimageviewer.cpp $(srcdir)/kcdiroperator.cpp $(srcdir)/kctextviewer.cpp $(srcdir)/bookmarkcombobox.cpp $(srcdir)/kclistview.cpp $(srcdir)/kcfstab.cpp $(srcdir)/kcfiledialog.cpp $(srcdir)/kcdrivebuttonbar.cpp $(srcdir)/kcsplash.cpp $(srcdir)/kcsimplebutton.cpp $(srcdir)/kcommander3.cpp $(srcdir)/main.cpp $(srcdir)/wizzard.cpp $(srcdir)/dlgsymlink.cpp $(srcdir)/dlgoverwrite.cpp $(srcdir)/dlgoptions.cpp  kcommander3.moc.cpp bookmarkcombobox.moc.cpp dlgproperties.moc.cpp kctextedit.moc.cpp statuslineentry.moc.cpp kcedit.moc.cpp kcsplash.moc.cpp dlgAdressbook.moc.cpp hexviewedit.moc.cpp kcfiledialog.moc.cpp kcimageviewer.moc.cpp dlgdelete.moc.cpp dlgcopy.moc.cpp kcsmtp.moc.cpp dlgtar.moc.cpp kclistview.moc.cpp kctextviewer.moc.cpp kcdiroperator.moc.cpp kcommander3view.moc.cpp kcview.moc.cpp kcsimplebutton.moc.cpp inputbox.moc.cpp kciconview.moc.cpp kcManViewer.moc.cpp kcdrivebuttonbar.moc.cpp kcmailus.moc.cpp
++kcommander3.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/dlgAdressbook.cpp $(srcdir)/statuslineentry.cpp $(srcdir)/dlgtar.cpp $(srcdir)/kcmailus.cpp $(srcdir)/kcsmtp.cpp $(srcdir)/kcManViewer.cpp $(srcdir)/dlgproperties.cpp $(srcdir)/kcview.cpp $(srcdir)/kciconview.cpp $(srcdir)/hexviewedit.cpp $(srcdir)/kcedit.cpp $(srcdir)/kctextedit.cpp $(srcdir)/kccommandparse.cpp $(srcdir)/kcfileiconprovider.cpp $(srcdir)/dlgdelete.cpp $(srcdir)/inputbox.cpp $(srcdir)/dlgcopy.cpp $(srcdir)/kcommander3view.cpp $(srcdir)/kcimageviewer.cpp $(srcdir)/kcdiroperator.cpp $(srcdir)/kctextviewer.cpp $(srcdir)/bookmarkcombobox.cpp $(srcdir)/kclistview.cpp $(srcdir)/kcfstab.cpp $(srcdir)/kcfiledialog.cpp $(srcdir)/kcdrivebuttonbar.cpp $(srcdir)/kcsplash.cpp $(srcdir)/kcsimplebutton.cpp $(srcdir)/kcommander3.cpp $(srcdir)/main.cpp $(srcdir)/wizzard.cpp $(srcdir)/dlgsymlink.cpp $(srcdir)/dlgoverwrite.cpp $(srcdir)/dlgoptions.cpp  kcommander3.moc.cpp bookmarkcombobox.moc.cpp dlgproperties.moc.cpp kctextedit.moc.cpp statuslineentry.moc.cpp kcedit.moc.cpp kcsplash.moc.cpp dlgAdressbook.moc.cpp hexviewedit.moc.cpp kcfiledialog.moc.cpp kcimageviewer.moc.cpp dlgdelete.moc.cpp dlgcopy.moc.cpp kcsmtp.moc.cpp dlgtar.moc.cpp kclistview.moc.cpp kctextviewer.moc.cpp kcdiroperator.moc.cpp kcommander3view.moc.cpp kcview.moc.cpp kcsimplebutton.moc.cpp inputbox.moc.cpp kciconview.moc.cpp kcManViewer.moc.cpp kcdrivebuttonbar.moc.cpp kcmailus.moc.cpp
+ 	@echo 'creating kcommander3.all_cpp.cpp ...'; \
+ 	rm -f kcommander3.all_cpp.files kcommander3.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcommander3.all_cpp.final; \
+-	for file in dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp metal.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp wizzard.cpp dlgsymlink.cpp dlgoverwrite.cpp dlgoptions.cpp  kcommander3.moc.cpp bookmarkcombobox.moc.cpp dlgproperties.moc.cpp kctextedit.moc.cpp statuslineentry.moc.cpp kcedit.moc.cpp kcsplash.moc.cpp dlgAdressbook.moc.cpp hexviewedit.moc.cpp kcfiledialog.moc.cpp kcimageviewer.moc.cpp dlgdelete.moc.cpp dlgcopy.moc.cpp kcsmtp.moc.cpp dlgtar.moc.cpp kclistview.moc.cpp kctextviewer.moc.cpp kcdiroperator.moc.cpp kcommander3view.moc.cpp kcview.moc.cpp kcsimplebutton.moc.cpp inputbox.moc.cpp kciconview.moc.cpp kcManViewer.moc.cpp kcdrivebuttonbar.moc.cpp kcmailus.moc.cpp; do \
++	for file in dlgAdressbook.cpp statuslineentry.cpp dlgtar.cpp kcmailus.cpp kcsmtp.cpp kcManViewer.cpp dlgproperties.cpp kcview.cpp kciconview.cpp hexviewedit.cpp kcedit.cpp kctextedit.cpp kccommandparse.cpp kcfileiconprovider.cpp dlgdelete.cpp inputbox.cpp dlgcopy.cpp kcommander3view.cpp kcimageviewer.cpp kcdiroperator.cpp kctextviewer.cpp bookmarkcombobox.cpp kclistview.cpp kcfstab.cpp kcfiledialog.cpp kcdrivebuttonbar.cpp kcsplash.cpp kcsimplebutton.cpp kcommander3.cpp main.cpp wizzard.cpp dlgsymlink.cpp dlgoverwrite.cpp dlgoptions.cpp  kcommander3.moc.cpp bookmarkcombobox.moc.cpp dlgproperties.moc.cpp kctextedit.moc.cpp statuslineentry.moc.cpp kcedit.moc.cpp kcsplash.moc.cpp dlgAdressbook.moc.cpp hexviewedit.moc.cpp kcfiledialog.moc.cpp kcimageviewer.moc.cpp dlgdelete.moc.cpp dlgcopy.moc.cpp kcsmtp.moc.cpp dlgtar.moc.cpp kclistview.moc.cpp kctextviewer.moc.cpp kcdiroperator.moc.cpp kcommander3view.moc.cpp kcview.moc.cpp kcsimplebutton.moc.cpp inputbox.moc.cpp kciconview.moc.cpp kcManViewer.moc.cpp kcdrivebuttonbar.moc.cpp kcmailus.moc.cpp; do \
+ 	  echo "#include \"$$file\"" >> kcommander3.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcommander3.all_cpp.final; \
+ 	done; \
+@@ -995,7 +994,6 @@
+ $(srcdir)/dlgtar.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+ $(srcdir)/kctextviewer.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+ $(srcdir)/kcommander3.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+-$(srcdir)/metal.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+ $(srcdir)/inputbox.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+ $(srcdir)/kcommander3view.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+ $(srcdir)/kcmailus.cpp: wizzard.h dlgsymlink.h dlgoverwrite.h dlgoptions.h 
+--- kcommander3-3.0/kcommander3/kcommander3.cpp.orig	Tue Apr 30 19:39:00 2002
++++ kcommander3-3.0/kcommander3/kcommander3.cpp	Tue Oct 15 15:21:34 2002
+@@ -64,7 +64,7 @@
+   connect( startTimer, SIGNAL(timeout()), SLOT(startReading()));
+   startTimer->start( 100, TRUE ); // 2 seconds single-shot timer
+ 
+-    qApp->setStyle( new MetalStyle );
++//    qApp->setStyle( new MetalStyle );
+ //    qApp->setFont( appFont, TRUE );
+   QToolTip::setGloballyEnabled ( settings.readBoolEntry("/KCommander/Show Tooltips",true));
+ }
+@@ -368,7 +368,7 @@
+   op->exec();
+   if(op->result() == QDialog::Accepted)
+   {
+-    qApp->setStyle(new MetalStyle);
++//    qApp->setStyle(new MetalStyle);
+     view->settingsChanged();
+     QToolTip::setGloballyEnabled ( settings.readBoolEntry("/KCommander/Show Tooltips",true));
+   }
