@@ -8,9 +8,11 @@ License:	GPL
 Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
 URL:		http://www.kcommander.org/
+BuildRequires:	autoconf
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	kdenetwork-devel
+BuildRequires:	qt-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
 
@@ -26,11 +28,12 @@ przeznaczonym dla by³ych u¿ytkowników Windows, którzy u¿ywali i
 polubili Windows Commandera.
 
 %prep
-%setup -q
+%setup -q -n %{name}3-%{version}
 
 %build
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
-%configure2_13
+%{__autoconf}
+%configure
 %{__make}
 
 %install
