@@ -17,9 +17,7 @@ URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel
-BuildRequires:	kdenetwork-devel
 BuildRequires:	qt-devel >= 3.0
-BuildRequires:	qt-st-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
 
@@ -41,12 +39,17 @@ polubili Windows Commandera.
 %build
 %{__autoconf}
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
-%configure && make clean
+%configure \
+	--enable-mt
+# clean is needed to regenerate files from *.ui for new qt
+%{__make} clean
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
