@@ -7,6 +7,7 @@ Release:	0.%{_beta}.1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
+# Source0-md5:	70af0c8d114e3813357c031c8c3b3b07
 Patch0:		%{name}-linkfix.patch
 URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
