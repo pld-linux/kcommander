@@ -1,0 +1,47 @@
+diff -Nur old/kcommander3/Makefile.in new/kcommander3/Makefile.in
+--- old/kcommander3/Makefile.in	2002-05-04 21:21:34.000000000 +0000
++++ new/kcommander3/Makefile.in	2003-12-01 18:46:12.000000000 +0000
+@@ -780,8 +780,8 @@
+ #>+ 41
+ wizzard.cpp: $(srcdir)/wizzard.ui wizzard.h wizzard.moc
+ 	rm -f wizzard.cpp
+-	$(UIC) -i wizzard.h $(srcdir)/wizzard.ui > wizzard.cpp || rm -f wizzard.cpp
+-	echo '#include "wizzard.moc"' >> wizzard.cpp
++	echo '#include "wizzard.moc"' > wizzard.cpp
++	$(UIC) -i wizzard.h $(srcdir)/wizzard.ui >> wizzard.cpp || rm -f wizzard.cpp
+ 
+ wizzard.h: $(srcdir)/wizzard.ui
+ 	$(UIC) -o wizzard.h $(srcdir)/wizzard.ui
+@@ -790,8 +790,8 @@
+ 	$(MOC) wizzard.h -o wizzard.moc
+ dlgsymlink.cpp: $(srcdir)/dlgsymlink.ui dlgsymlink.h dlgsymlink.moc
+ 	rm -f dlgsymlink.cpp
+-	$(UIC) -i dlgsymlink.h $(srcdir)/dlgsymlink.ui > dlgsymlink.cpp || rm -f dlgsymlink.cpp
+-	echo '#include "dlgsymlink.moc"' >> dlgsymlink.cpp
++	echo '#include "dlgsymlink.moc"' > dlgsymlink.cpp
++	$(UIC) -i dlgsymlink.h $(srcdir)/dlgsymlink.ui >> dlgsymlink.cpp || rm -f dlgsymlink.cpp
+ 
+ dlgsymlink.h: $(srcdir)/dlgsymlink.ui
+ 	$(UIC) -o dlgsymlink.h $(srcdir)/dlgsymlink.ui
+@@ -800,8 +800,8 @@
+ 	$(MOC) dlgsymlink.h -o dlgsymlink.moc
+ dlgoverwrite.cpp: $(srcdir)/dlgoverwrite.ui dlgoverwrite.h dlgoverwrite.moc
+ 	rm -f dlgoverwrite.cpp
+-	$(UIC) -i dlgoverwrite.h $(srcdir)/dlgoverwrite.ui > dlgoverwrite.cpp || rm -f dlgoverwrite.cpp
+-	echo '#include "dlgoverwrite.moc"' >> dlgoverwrite.cpp
++	echo '#include "dlgoverwrite.moc"' > dlgoverwrite.cpp
++	$(UIC) -i dlgoverwrite.h $(srcdir)/dlgoverwrite.ui >> dlgoverwrite.cpp || rm -f dlgoverwrite.cpp
+ 
+ dlgoverwrite.h: $(srcdir)/dlgoverwrite.ui
+ 	$(UIC) -o dlgoverwrite.h $(srcdir)/dlgoverwrite.ui
+@@ -810,8 +810,8 @@
+ 	$(MOC) dlgoverwrite.h -o dlgoverwrite.moc
+ dlgoptions.cpp: $(srcdir)/dlgoptions.ui dlgoptions.h dlgoptions.moc
+ 	rm -f dlgoptions.cpp
+-	$(UIC) -i dlgoptions.h $(srcdir)/dlgoptions.ui > dlgoptions.cpp || rm -f dlgoptions.cpp
+-	echo '#include "dlgoptions.moc"' >> dlgoptions.cpp
++	echo '#include "dlgoptions.moc"' > dlgoptions.cpp
++	$(UIC) -i dlgoptions.h $(srcdir)/dlgoptions.ui >> dlgoptions.cpp || rm -f dlgoptions.cpp
+ 
+ dlgoptions.h: $(srcdir)/dlgoptions.ui
+ 	$(UIC) -o dlgoptions.h $(srcdir)/dlgoptions.ui
