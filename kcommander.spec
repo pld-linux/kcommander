@@ -9,7 +9,7 @@ Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
 # Source0-md5:	70af0c8d114e3813357c031c8c3b3b07
 Source1:	http://www.pld-linux.org/Members/andree/%{name}-metal.tar.gz
-# Source1-md5:	8dbf50a56068e90f69185de2bef6993d
+# Source1-md5:	0bc00f70082a505a86b94ca5115afef0
 Patch0:		%{name}-linkfix.patch
 Patch1:		%{name}-makefile.patch
 Patch2:		%{name}-first-start.patch
