@@ -17,7 +17,6 @@ BuildRequires:	qt-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
 
-%define			_prefix		/usr/X11R6
 
 %description
 KCommander is the ultimate tool for every ex-windows-users, who used
