@@ -8,16 +8,20 @@ License:	GPL
 Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
 # Source0-md5:	70af0c8d114e3813357c031c8c3b3b07
+Source1:	http://www.pld-linux.org/Members/andree/%{name}-metal.tar.gz
+# Source1-md5:	8dbf50a56068e90f69185de2bef6993d
 Patch0:		%{name}-linkfix.patch
+Patch1:		%{name}-makefile.patch
+Patch2:		%{name}-first-start.patch
 URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
 BuildRequires:	fam-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	kdenetwork-devel
 BuildRequires:	qt-devel >= 3.0
+BuildRequires:	qt-st-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
-
 
 %description
 KCommander is the ultimate tool for every ex-windows-users, who used
@@ -29,13 +33,15 @@ przeznaczonym dla by³ych u¿ytkowników Windows, którzy u¿ywali i
 polubili Windows Commandera.
 
 %prep
-%setup -q -n %{name}3-%{version}
-%patch -p1
+%setup -q -n %{name}3-%{version} -a 1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__autoconf}
 kde_icondir="%{_pixmapsdir}"; export kde_icondir
-%configure
+%configure && make clean
 %{__make}
 
 %install
