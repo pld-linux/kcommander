@@ -1,6 +1,6 @@
 %define		_beta		Beta2
-Summary:	File management
-Summary(pl):	Menad¿er plików podobny do Windows Commandera
+Summary:	WindowsCommander-like file manager
+Summary(pl):	Zarz±dca plików podobny do Windows Commandera
 Name:		kcommander
 Version:	3.0
 Release:	0.%{_beta}.1
