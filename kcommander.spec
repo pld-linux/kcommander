@@ -3,7 +3,7 @@ Summary:	WindowsCommander-like file manager
 Summary(pl):	Zarz±dca plików podobny do Windows Commandera
 Name:		kcommander
 Version:	3.0
-Release:	0.%{_beta}.1
+Release:	0.%{_beta}.2
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
@@ -15,8 +15,7 @@ Patch1:		%{name}-makefile.patch
 Patch2:		%{name}-first-start.patch
 URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
-BuildRequires:	fam-devel
-BuildRequires:	kdelibs-devel
+BuildRequires:	automake
 BuildRequires:	qt-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
@@ -37,10 +36,12 @@ polubili Windows Commandera.
 %patch2 -p1
 
 %build
+cp -f /usr/share/automake/config.* admin
 %{__autoconf}
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %configure \
-	--enable-mt
+	--enable-mt \
+	--with-qt-libraries=%{_libdir}
+
 # clean is needed to regenerate files from *.ui for new qt
 %{__make} clean
 %{__make}
@@ -58,5 +59,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS TODO
 %attr(755,root,root) %{_bindir}/kcommander3
-#%%{_datadir}/apps/kcommander3
-#%%{_pixmapsdir}/*/*/*/*
