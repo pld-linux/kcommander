@@ -3,10 +3,11 @@ Summary:	File management
 Summary(pl):	Menad¿er plików podobny do Windows Commandera
 Name:		kcommander
 Version:	3.0
-Release:	0.1
+Release:	0.%{_beta}.1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://codewizards.de/pub/kcommander/%{name}3-%{version}%{_beta}.tar.gz
+Patch0:		%{name}-linkfix.patch
 URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
 BuildRequires:	fam-devel
@@ -29,10 +30,11 @@ polubili Windows Commandera.
 
 %prep
 %setup -q -n %{name}3-%{version}
+%patch -p1
 
 %build
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %{__autoconf}
+kde_icondir="%{_pixmapsdir}"; export kde_icondir
 %configure
 %{__make}
 
@@ -40,14 +42,12 @@ kde_icondir="%{_pixmapsdir}"; export kde_icondir
 rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-%find_lang %{name}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 %doc AUTHORS TODO
 %attr(755,root,root) %{_bindir}/kcommander3
-%{_datadir}/apps/kcommander3
+#%{_datadir}/apps/kcommander3
 #%{_pixmapsdir}/*/*/*/*
