@@ -1,0 +1,14 @@
+diff -Nur old/kcommander3/kcommander3view.cpp new/kcommander3/kcommander3view.cpp
+--- old/kcommander3/kcommander3view.cpp	2002-05-04 18:55:00.000000000 +0000
++++ new/kcommander3/kcommander3view.cpp	2003-12-01 23:53:27.000000000 +0000
+@@ -438,8 +438,8 @@
+   if(ask)
+   {
+     int x1,x2;
+-    x1 = settings.readNumEntry( "/KCommander/General/splitter_x1", 0);
+-    x2 = settings.readNumEntry( "/KCommander/General/splitter_x2", 0);
++    x1 = settings.readNumEntry( "/KCommander/General/splitter_x1", 391);
++    x2 = settings.readNumEntry( "/KCommander/General/splitter_x2", 391);
+     // hehe bei  0 0 macht er auch 50% cool
+     QValueList<int>::Iterator it = list.begin();
+      *it = x1;
