@@ -1,6 +1,6 @@
 %define		_beta		Beta2
 Summary:	WindowsCommander-like file manager
-Summary(pl):	Zarz±dca plików podobny do Windows Commandera
+Summary(pl.UTF-8):   ZarzÄ…dca plikÃ³w podobny do Windows Commandera
 Name:		kcommander
 Version:	3.0
 Release:	0.%{_beta}.2
@@ -24,9 +24,9 @@ Obsoletes:	kcommander2
 KCommander is the ultimate tool for every ex-windows-users, who used
 and liked WindowsCommander.
 
-%description -l pl
-KCommander jest narzêdziem s³u¿±cym do zarz±dzania plikami,
-przeznaczonym dla by³ych u¿ytkowników Windows, którzy u¿ywali i
+%description -l pl.UTF-8
+KCommander jest narzÄ™dziem sÅ‚uÅ¼Ä…cym do zarzÄ…dzania plikami,
+przeznaczonym dla byÅ‚ych uÅ¼ytkownikÃ³w Windows, ktÃ³rzy uÅ¼ywali i
 polubili Windows Commandera.
 
 %prep
