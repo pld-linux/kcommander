@@ -16,7 +16,7 @@ Patch2:		%{name}-first-start.patch
 URL:		http://www.kcommander.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	qt-devel >= 3.0
+BuildRequires:	qt-devel >= 6:3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	kcommander2
 
